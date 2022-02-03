@@ -1,6 +1,6 @@
 # Spring boot assessment
 
-You task is to create a spring boot project titled `person-rest-api` which accomplishes the following objectives.
+You task is to create a spring boot project titled `author-rest-api` which accomplishes the following objectives.
 
 ## Objectives
 
@@ -11,13 +11,14 @@ This application should use the following model class.
 
 ```java
 
-public class Person {
+public class Author {
 
     private Integer id;
     private String name;
     private LocalDate dob;
     private String address;
     private String email;
+    private List<String> genre;
 
 }
 ```
@@ -32,11 +33,11 @@ The application must use the repository layer to access the data. The repository
 
 The application must use the service layer to access the repository and it should have methods
 
-- Create a person 
-- Find a person by id
-- Find all people
-- Update a person
-- Delete a person
+- Create an Author 
+- Find an Author by id
+- Find all Authors
+- Update an Author
+- Delete an Author
 
 ### 4 - DTO
 
@@ -58,18 +59,18 @@ The application must have a controller to handle the requests. The controller mu
 
 | Method   |      Endpoint          |  Description |
 |----------|:-------------:|------: |
-| `GET`       |  `/person`          | Find all people|
-| `GET`       |  `/person/{id}`     | Find a person with the `id` |
-| `POST`      |  `/person`          | Create a person |
-| `PUT`       |  `/person/{id}`     | Update a person with the `id` |
-| `DELETE`    |  `/person/{id}`     | Delete a person with the `id` |
+| `GET`       |  `/author`          | Find all authors|
+| `GET`       |  `/author/{id}`     | Find a author with the `id` |
+| `POST`      |  `/author`          | Create an author |
+| `PUT`       |  `/author/{id}`     | Update an author with the `id` |
+| `DELETE`    |  `/author/{id}`     | Delete an author with the `id` |
 
 ### 7 - Exception Handling
 
 An exception handler must be implemented to handle the following exceptions.
 
 - `MethodArgumentNotValidException`
-- `PersonNotFoundException` - this excetion class must be created and is thrown when a person is not found.
+- `AuthorNotFoundException` - this excetion class must be created and is thrown when a person is not found.
 
 ## References
 
